@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% block title%} форма входа {% endblock%}
+
+{% block content%}
+    <div class="features">
+        <h1>форма входа</h1>
+        <form method="post">
+            {% csrf_token %}<br>
+            {{ form.login }}<br>
+            {{ form.password }}<br>
+            {{ form.status }}<br>
+            {{ form.date }}<br>
+            <span>{{ error }}</span>
+
+            <button class="btn btn-success" type="submit"> войти </button>
+        </form>
+    </div>
+{% endblock%}

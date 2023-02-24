@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title%} форма добавления {% endblock%}
+
+<form method="post">
+    {% csrf_token %}<br>
+    {{ form.login }}<br>
+    {{ form.password }}<br>
+    {{ form.status }}<br>
+    {{ form.date }}<br>
+    <span>{{ error }}</span>
+
+    <button class="btn btn-success" type="submit"> Добавить статью </button>
+</form>

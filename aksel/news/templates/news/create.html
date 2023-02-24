@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+
+{% block title%} форма добавления {% endblock%}
+
+{% block content%}
+    <div class="features">
+        <h1>форма добавления</h1>
+        <button class="but"><a href="{% url 'student' %}">Студент</a></button>
+        <button class="but"><a href="{% url 'teacher' %}">Преподаватель</a></button>
+
+    </div>
+{% endblock%}

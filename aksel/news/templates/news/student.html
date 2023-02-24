@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+
+{% block title%} Добро пожаловать будущий врач!{% endblock%}
+
+{% block content %}
+    <div class="features">
+        <h2>Заполни поля внимательно!</h2>
+        <form method="post" class="">
+            {% csrf_token %}<br>
+            {{ form.surname }}<br>
+            {{ form.name }}<br>
+            {{ form.patronymic }}<br><br>
+            {{ form.university }}<br>
+            {{ form.status }}<br>
+            {{ form.num_group }}<br>
+            {{ form.email }}<br>
+            {{ form.password }}<br>
+            <span>{{ error }}</span>
+
+            <button class="but" type="submit"> Зарегистрироваться </button>
+        </form>
+    </div>
+{% endblock %}

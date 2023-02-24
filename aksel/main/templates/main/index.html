@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title%} {{ title }} {% endblock%}
+
+{% block content%}
+    <div class="circle">
+        <div class="features">
+            <h1>G R E E N E R</h1>
+            <p> Наша миссия - сократить количество неверных диагнозов!</p><br>
+            <button class="botr"><a href="{% url 'create' %}">Регистрация</a></button>
+            <button class="botr"><a href="{% url 'sign' %}">Вход</a></button>
+        </div>
+    </div>
+{% endblock%}
